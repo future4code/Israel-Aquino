@@ -71,7 +71,6 @@ function imprimeTresCoresFavoritas() {
     console.log(array)
 }
 
-
 // Exercício 6
 function retornaStringEmMaiuscula() {
   const palavraAleatoria = prompt("Escreva uma palavra qualquer com todas as letras minúsculas.")
@@ -81,22 +80,41 @@ function retornaStringEmMaiuscula() {
 
 // Exercício 7
 function calculaIngressosEspetaculo() {
-  // escreva seu código aqui
+const custo = Number(prompt("Qual o custo de um espetáculo de teatro?"))
+let ingressos = Number(prompt("Qual o valor unitário do ingresso?"))
+
+console.log(custo / ingressos)
+
 }
 
 // Exercício 8
 function checaStringsMesmoTamanho() {
-  // escreva seu código aqui
+  const string1 = prompt("Escreva o nome de uma fruta")
+  const string2 = prompt("Escreva o nome de uma segunda fruta")
+  
+  console.log(string1.length === string2.length)
 }
 
 // Exercício 9
 function checaIgualdadeDesconsiderandoCase() {
-  // escreva seu código aqui
+  const primeiraString = prompt("Escreva um nome qualquer")
+  const segundaString = prompt("Escreva um outro nome")
+
+  console.log(primeiraString.toUpperCase() === segundaString.toUpperCase())
 }
 
 // Exercício 10
 function checaRenovacaoRG() {
-  // escreva seu código aqui
+  const anohoje = Number(prompt("Qual é o ano que estamos?"))
+  const AnoNascimento1 = Number(prompt("Qual o ano do seu nascimento?"))
+  let anoId = Number(prompt("Qual o ano que sua carteira de identidade foi emitida?"))
+
+const idadeAtual = anohoje - AnoNascimento1
+const dataID = anohoje - anoId
+
+console.log((idadeAtual <= 20 && dataID >= 5) || (idadeAtual > 20 && idadeAtual <= 50 && dataID >= 10) ||
+(idadeAtual > 50 && dataID >= 15 ))
+
 }
 
 // Exercício 11
@@ -106,5 +124,9 @@ function checaAnoBissexto() {
 
 // Exercício 12
 function checaValidadeInscricaoLabenu() {
-  // escreva seu código aqui
+const maiorIdade = prompt("Você tem mais de 18 anos?")
+const ensinoMedio = prompt("Você possui ensino médio completo?")
+const horarios = prompt("Você possui disponibilidade exclusiva durante os horários do curso?")
+
+console.log(maiorIdade == "sim" && ensinoMedio == "sim" && horarios == "sim")
 }
