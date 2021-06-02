@@ -119,7 +119,8 @@ console.log((idadeAtual <= 20 && dataID >= 5) || (idadeAtual > 20 && idadeAtual 
 
 // Exercício 11
 function checaAnoBissexto() {
-  // escreva seu código aqui
+  const anoBisexto = Number(prompt("Me informe um ano para saber se é Bissexto"))
+  console.log((anoBisexto % 4 == 0) && (anoBisexto % 100 !=0) || (anoBisexto % 400 == 0))
 }
 
 // Exercício 12
