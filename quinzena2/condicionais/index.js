@@ -59,5 +59,11 @@
 
 // -- 4 -- 
 
+const generoFilme = prompt("Qual o gênero de filme que tu vai assistir?").toLocaleLowerCase()
+const precoFilme = Number(prompt("Qual é o preço do ingresso?"))
 
-
+if (generoFilme === "fantasia" && precoFilme < 15) { 
+    console.log("Bom filme!")
+}else{
+    console.log("Escolha outro filme :(")
+}
