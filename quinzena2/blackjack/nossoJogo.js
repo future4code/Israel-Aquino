@@ -14,7 +14,7 @@
 
    
     let blackJack = confirm("Quer iniciar um novo jogo?")
-    const nome = prompt("Informe o nome do player")
+       const nome = prompt("Informe o nome do player")
       
     while (blackJack) {
        if (blackJack) {
@@ -41,4 +41,4 @@ if (confirm !== confirm ){(blackJack)
 }else {console.log("O jogo acabou, obrigado por jogar!")}
    }}
 
-
+    
