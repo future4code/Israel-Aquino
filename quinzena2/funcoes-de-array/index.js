@@ -1,77 +1,87 @@
-//------------ Exercícios de interpretação de código --------
-// 1 - O codigo faz 5 contagens, somando os antigos 
-// resultados da variavel valor, com o novoresultado. E será impresso no console o valor 10
+// -------------------------  Exercícios de escrita de código -------------------
+//1 -
+// const pets = [
+//   { nome: "Lupin", raca: "Salsicha"},
+//   { nome: "Polly", raca: "Lhasa Apso"},
+//   { nome: "Madame", raca: "Poodle"},
+//   { nome: "Quentinho", raca: "Salsicha"},
+//   { nome: "Fluffy", raca: "Poodle"},
+//   { nome: "Caramelo", raca: "Vira-lata"},
+// ]
+
+// //a)
+// const nomeDogs = pets.map((inputPets) =>{
+//   return inputPets.nome})
+  
+// console.log(nomeDogs)
+
+// //b)
+
+// const inputSalsicha = (categoria)=>{
+//   return categoria.raca === "Salsicha"
+//  }
+
+// const salsichaFilter = pets.filter(inputSalsicha)
+
+// const printSalsicha = salsichaFilter.map((inputPrint) =>{
+// return inputPrint.nome
+// })
+// console.log(printSalsicha)
+
+// // c)
+// const inputPoodles = (categoria)=>{
+//   return categoria.raca === "Poodle"
+//  }
+
+// const poodleFilter = pets.filter(inputPoodles)
+
+// const printPoodle = poodleFilter.map((inputPrint,inputPrint2) =>{
+// return `Você ganhou um cupom de desconto de 10% para tosar o/a ${inputPrint.nome}`
+// })
+// console.log(printPoodle)
 
 // 2 - 
-// a) os números que são maiores que 18 no array
-// b) Sim. Basta tirar o "if" do código e deixar apenas o numero of lista com o console.log na variável numero
 
-//3- ***
+// //a)
+const produtos = [
+   { nome: "Alface Lavada", categoria: "Hortifruti", preco: 2.5 },
+   { nome: "Guaraná 2l", categoria: "Bebidas", preco: 7.8 },
+   { nome: "Veja Multiuso", categoria: "Limpeza", preco: 12.6 },
+   { nome: "Dúzia de Banana", categoria: "Hortifruti", preco: 5.7 },
+   { nome: "Leite", categoria: "Bebidas", preco: 2.99 },
+   { nome: "Cândida", categoria: "Limpeza", preco: 3.30 },
+   { nome: "Detergente Ypê", categoria: "Limpeza", preco: 2.2 },
+   { nome: "Vinho Tinto", categoria: "Bebidas", preco: 55 },
+   { nome: "Berinjela kg", categoria: "Hortifruti", preco: 8.99 },
+   { nome: "Sabão em Pó Ypê", categoria: "Limpeza", preco: 10.80 }
+]
 
+// const inputItem = produtos.map((nome)=>{
+// return nome.nome})
 
+// console.log(inputItem)
 
+// //b)
+// const inputNovoPreco = produtos.map((nome,indice, array)=>{
+//   const desconto = nome.preco - nome.preco / (100 * 0.5) 
+//   console.log(`Produt: ${nome.nome}. Preço com 5% de desconto: R$ ${desconto}`)
+//   })
 
-// ----------- Exercícios de escrita de código -------------
+  // c) 
+  
+  // const inputBebidas = produtos.filter((input,valor) => {
+  //   if(input.categoria === "Bebidas"){
+  //     return true}
+  //     else{false}
+  //   })
 
-//1 - a) / b) / c)
-// let userPets = Number(prompt("Quantos pets você tem?")) // tentei com if else no meio do código, porém não consegui fazer imprimir o array em uma linha só. 
-// //Ele sempre imprimia o primeiro input do úsuario e depois o array com todos os outros
-// console.log(userPets)
+  //   let novoArray = [...inputBebidas]
 
-// if(userPets === 0){  
-//   console.log("Que pena! Você pode adotar um pet!")
-// }
+  // console.log(novoArray)
 
-// if(userPets > 0){  
-//   let array = []
-//     for(let i=0; i < userPets; i++){   
-//   array.push(prompt("Quais os nomes dos seus pets?"))
-     
-//   }
-//   console.log(array)
-// }else{}
+// d)
+const inputYpe = produtos.filter((array) => {
+  return array.nome.includes("Ypê")
+})
 
-//2 
-
-let arrayOriginal = [10,20,35,40,69]
-
-// a - 
-function print1 (arrayOriginal){
-  for(let input of arrayOriginal){
-    console.log("a:",input)
-      }
-      
-}
-print1(arrayOriginal)
-
-//b -
-function print2 (arrayOriginal){
-  for(let input of arrayOriginal){
-    console.log("b:",input/10)
-      }
-      
-}
-print2(arrayOriginal)
-
-//c -
-function print3 (arrayOriginal){
-  let inputPar = []
-    for(let input of arrayOriginal){
-      if(input % 2 ===0){
-        inputPar.push(input)}
-      }
-      console.log("c:",inputPar)
-}
-print3(arrayOriginal)
-
-// d - 
-function print4(arrayOriginal){
-    let array = []
-    let i = 0
-    for(let valor of arrayOriginal){
-      array.push(`O elemento do índex ${i} é: ${valor}`)
-      i++
-    }
-    console.log("d:", array)
-  }
-  print4(arrayOriginal)
+console.log(inputYpe)
