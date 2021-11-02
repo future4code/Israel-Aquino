@@ -1,8 +1,19 @@
-import './App.css';
+import CardVideo from './components/CardVideo';
+import BotaoMenu from './components/BotaoMenu';
+import styled from 'styled-components'
+
+const Footer = styled.footer`
+    background: #333b3e;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    padding: 0 10px;
+`
 
 function App() {
-  const titulo = "Titulo do vídeo"
-
+  
   function reproduzVideo() {
     alert("O vídeo está sendo reproduzido")}
 
@@ -15,56 +26,56 @@ function App() {
 
     <main>
         <nav className="menu-vertical">
-            <ul>
-                <li className="botoes-meunu-vertical">Início</li>
-                <li className="botoes-meunu-vertical">Em alta</li>
-                <li className="botoes-meunu-vertical">Inscrições</li>
-                <hr/>
-                <li className="botoes-meunu-vertical">Originais</li>
-                <li className="botoes-meunu-vertical">Histórico</li>
-            </ul>
+        <BotaoMenu textoBotao={'Ínicio'}/>
+        <BotaoMenu textoBotao={'Em Alta'}/>
+        <BotaoMenu textoBotao={'Inscrições'}/>       
+        <hr />
+        <BotaoMenu textoBotao={'Biblioteca'}/>   
+        <BotaoMenu textoBotao={'Histórico'}/>   
+        <BotaoMenu textoBotao={'Originais'}/>   
         </nav>
 
         <section className="painel-de-videos">
-            <div className="box-pagina-principal media1" onClick={reproduzVideo}>
-                <img src="https://picsum.photos/400/400?a=1 " alt="" controls loop/>
-                <h4>{titulo}</h4>
-               
-            </div>
-            <div className="box-pagina-principal media2"  onClick={reproduzVideo}>
-                <img src="https://picsum.photos/400/400?a=2 " alt=""></img>
-                <h4>{titulo}</h4>
-            </div>
-            <div className="box-pagina-principal media3"  onClick={reproduzVideo}>
-                <img src="https://picsum.photos/400/400?a=3 " alt=""/>
-                <h4>{titulo}</h4>
-               </div>
-            <div className="box-pagina-principal media4"  onClick={reproduzVideo}>
-                <img src="https://picsum.photos/400/400?a=4 " alt=""/>
-                <h4>{titulo}</h4>
-            </div>
-            <div className="box-pagina-principal media5"  onClick={reproduzVideo}>
-                <img src="https://picsum.photos/400/400?a=5 " alt=""/>
-                <h4>{titulo}</h4>
-            </div>
-            <div className="box-pagina-principal media6"  onClick={reproduzVideo}>
-                <img src="https://picsum.photos/400/400?a=6 " alt=""/>
-                <h4>{titulo}</h4>
-            </div>
-            <div className="box-pagina-principal media7"  onClick={reproduzVideo}>
-                <img src="https://picsum.photos/400/400?a=7 " alt=""/>
-                <h4>{titulo}</h4>
-            </div>
-            <div className="box-pagina-principal media8"  onClick={reproduzVideo}>
-                <img src="https://picsum.photos/400/400?a=8 " alt=""/>
-                <h4>{titulo}</h4>
-        </div>
+         <CardVideo titulo={'Video 1'}
+         link={'https://picsum.photos/400/400?a=1'}
+         reproduzVideo = {reproduzVideo}
+         /> 
+         <CardVideo titulo={'Video 2'}
+         link={'https://picsum.photos/400/400?a=2'}
+         reproduzVideo = {reproduzVideo}
+         /> 
+         <CardVideo titulo={'Video 3'}
+         link={'https://picsum.photos/400/400?a=3'}
+         reproduzVideo = {reproduzVideo}
+         /> 
+         <CardVideo titulo={'Video 4'}
+         link={'https://picsum.photos/400/400?a=4'}
+         reproduzVideo = {reproduzVideo}
+         /> 
+         <CardVideo titulo={'Video 5'}
+         link={'https://picsum.photos/400/400?a=5'}
+         reproduzVideo = {reproduzVideo}
+         /> 
+         <CardVideo titulo={'Video 6'}
+         link={'https://picsum.photos/400/400?a=6'}
+         reproduzVideo = {reproduzVideo}
+         /> 
+         <CardVideo titulo={'Video 7'}
+         link={'https://picsum.photos/400/400?a=7'}
+         reproduzVideo = {reproduzVideo}
+         /> 
+         <CardVideo titulo={'Video 8'}
+         link={'https://picsum.photos/400/400?a=8'}
+         reproduzVideo = {reproduzVideo}
+         /> 
+              
+                        
         </section>
         
     </main>
-    <footer>
-        <h4>Oi! Eu moro no footer!</h4>
-    </footer>    
+    <Footer>
+      Oi! Eu moro no footer!
+    </Footer>    
 </div>
   );
 }
